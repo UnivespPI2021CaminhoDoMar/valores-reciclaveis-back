@@ -1,0 +1,24 @@
+package br.com.univesp.valoresreciclaveis.model;
+
+public enum Categoria {
+    PAPEL_BRANCO,
+    JORNAL_E_REVISTA,
+    PAPEL_MISTO,
+    PAPELAO,
+    TETRA,
+    PLASTICO_PEAD_BRANCO,
+    PLASTICO_PEAD_COLORIDO,
+    PLASTICO_APARA_BRANCO,
+    PLASTICO_APARA_COLORIDO,
+    PLASTICO_PP_BRANCO,
+    PLASTICO_PP_COLORIDO,
+    PET_BRANCA,
+    PET_VERDE,
+    PET_LARANJA,
+    PET_AZUL,
+    PET_OLEO,
+    VIDRO,
+    FERROSO,
+    OUTROS_MATERIAIS,
+    PRESTACAO_DE_SERVICOS
+}
