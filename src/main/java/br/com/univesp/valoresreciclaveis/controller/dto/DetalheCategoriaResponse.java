@@ -8,35 +8,35 @@ import java.math.BigDecimal;
 //classe para exposição dos detalhes de prestação de contas
 public class DetalheCategoriaResponse {
 
-    private Categoria categoria;
+    private Categoria nomeCategoria;
 
-    private BigDecimal valorMaximo;
+    private BigDecimal maximo;
 
-    private BigDecimal valorMinimo;
+    private BigDecimal minimo;
 
-    private BigDecimal valorMedio;
+    private BigDecimal media;
 
 
     public DetalheCategoriaResponse(Categoria categoria, BigDecimal valorMaximo, BigDecimal valorMinimo, BigDecimal valorMedio) {
-        this.categoria = categoria;
-        this.valorMaximo = valorMaximo;
-        this.valorMinimo = valorMinimo;
-        this.valorMedio = valorMedio;
+        this.nomeCategoria = categoria;
+        this.maximo = valorMaximo;
+        this.minimo = valorMinimo;
+        this.media = valorMedio;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public Categoria getNomeCategoria() {
+        return nomeCategoria;
     }
 
-    public BigDecimal getValorMaximo() {
-        return valorMaximo;
+    public BigDecimal getMaximo() {
+        return maximo;
     }
 
-    public BigDecimal getValorMinimo() {
-        return valorMinimo;
+    public BigDecimal getMinimo() {
+        return minimo;
     }
 
-    public BigDecimal getValorMedio() {
-        return valorMedio;
+    public BigDecimal getMedia() {
+        return media;
     }
 }
