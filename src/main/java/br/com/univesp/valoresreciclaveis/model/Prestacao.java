@@ -1,13 +1,13 @@
 package br.com.univesp.valoresreciclaveis.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "tb_prestacao")
 public class Prestacao {
-    //atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,10 +16,12 @@ public class Prestacao {
     @Column(nullable = false)
     private Categoria categoria;
 
+    @Digits(integer=10, fraction=2)
     @Positive
     @Column(nullable = false)
     private BigDecimal qteMatComercializado;
 
+    @Digits(integer=10, fraction=2)
     @Positive
     @Column(nullable = false)
     private BigDecimal valor;
