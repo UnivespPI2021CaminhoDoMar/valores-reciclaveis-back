@@ -31,6 +31,24 @@ Com o propósito de <b>viabilizar a implantação da nova funcionalidade de cont
 <b>E</b> migrar os dados inseridos <br>
 <b>Então</b> eu visualizarei os dados inseridos nas telas Home e Prestação de Contas<br>
 
+# Cenários relativos ao backend
+
+<b>Dado</b> que estou no Postman
+<b>Quando</b> eu preencher o body com dados em json com os campos  “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona” corretamente
+<b>E</b> enviar os dados para prestacao-contas/inserir{POST}
+<b>Então</b> o dado enviado será inserido corretamente no banco de dados
+E o retorno será 201.
+
+<b>Dado</b> que eu estou no Postman
+<b>Quando</b> eu solicitar dados ao endpoint prestacao-contas{GET}
+<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”.
+<b>E</b> o retorno será 200.
+
+<b>Dado</b> que eu estou no Postman
+<b>Quando</b> eu solicitar dados ao endpoint prestacao-contas/detalhes{GET}
+<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Valor Mínimo (R$ por quilo)”, “Valor Máximo (R$ por quilo)” e “Valor Médio (R$ por quilo)” tendo em vista “Zona” e  “Categoria”.
+<b>E</b> o retorno será 200.
+
 # Itens relativos às ações do usuário
 ### Home
 <b>Valor Mínimo</b> - Decimal (10, 2), not null<br>
