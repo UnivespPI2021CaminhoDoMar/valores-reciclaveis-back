@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -38,7 +39,7 @@ public class PrestacaoService {
                 List<BigDecimal> listaValores = prestacoesPorCategoriaEZona.stream().map(prestacao -> prestacao.getValor().divide(prestacao.getQteMatComercializado(), RoundingMode.DOWN)).collect(Collectors.toList());
                 BigDecimal max =  listaValores.stream().reduce(new BigDecimal(Integer.MIN_VALUE), (subtotal, element) -> subtotal.max(element));
                 BigDecimal min =  listaValores.stream().reduce(new BigDecimal(Integer.MAX_VALUE), (subtotal, element) -> subtotal.min(element));
-                BigDecimal avg = listaValores.stream().reduce(BigDecimal.ZERO, (subtotal, element) -> subtotal.add(element)).divide(new BigDecimal(listaValores.size()));
+                BigDecimal avg = listaValores.stream().reduce(BigDecimal.ZERO, (subtotal, element) -> subtotal.add(element)).divide(new BigDecimal(listaValores.size()), RoundingMode.HALF_EVEN);
 
                 listaCategoriaResponse.add(new DetalheCategoriaResponse(categoria, max, min, avg));
             });
