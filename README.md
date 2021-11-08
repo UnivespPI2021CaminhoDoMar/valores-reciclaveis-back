@@ -24,28 +24,28 @@ Com o propósito de <b>viabilizar a implantação da nova funcionalidade de cont
 <b>Quando</b> eu clicar em <b>Home</b> ou <b>Prestação de Contas</b><br>
 <b>Então</b> eu serei redirecionado às respectivas telas.<br>
 
-<b>Dado</b> que eu estou na tela Inserir Dados
-<b>Quando</b> eu preencher os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”
-<b>E</b> clicar em “Inserir”
-<b>Então</b> as tabelas presentes nas telas em Home e Prestação de Contas levarão em conta o novo dado inserido.
+<b>Dado</b> que eu estou na tela <b>Inserir Dados</b><br>
+<b>Quando</b> eu preencher os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”<br>
+<b>E</b> clicar em “Inserir”<br>
+<b>Então</b> as tabelas presentes nas telas em Home e Prestação de Contas levarão em conta o novo dado inserido.<br>
 
 # Cenários relativos ao backend
 
-<b>Dado</b> que estou no Postman
-<b>Quando</b> eu preencher o body com dados em json com os campos  “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona” corretamente
-<b>E</b> enviar os dados para prestacao-contas/inserir{POST}
-<b>Então</b> o dado enviado será inserido corretamente no banco de dados
-E o retorno será 201.
+<b>Dado</b> que estou no Postman<br>
+<b>Quando</b> eu preencher o body com dados em json com os campos  “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona” corretamente<br>
+<b>E</b> enviar os dados para <b>prestacao-contas/inserir{POST}</b><br>
+<b>Então</b> o dado enviado será inserido corretamente no banco de dados<br>
+E o retorno será 201.<br>
 
-<b>Dado</b> que eu estou no Postman
-<b>Quando</b> eu solicitar dados ao endpoint prestacao-contas{GET}
-<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”.
-<b>E</b> o retorno será 200.
+<b>Dado</b> que eu estou no Postman<br>
+<b>Quando</b> eu solicitar dados ao endpoint <b>prestacao-contas{GET}</b><br>
+<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”<br>
+<b>E</b> o retorno será 200.<br>
 
-<b>Dado</b> que eu estou no Postman
-<b>Quando</b> eu solicitar dados ao endpoint prestacao-contas/detalhes{GET}
-<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Valor Mínimo (R$ por quilo)”, “Valor Máximo (R$ por quilo)” e “Valor Médio (R$ por quilo)” tendo em vista “Zona” e  “Categoria”.
-<b>E</b> o retorno será 200.
+<b>Dado</b> que eu estou no Postman<br>
+<b>Quando</b> eu solicitar dados ao endpoint <b>prestacao-contas/detalhes{GET}</b><br>
+<b>Então</b> todos os dados presentes na base de dados aparecerão na resposta em formato json, contendo os campos “Valor Mínimo (R$ por quilo)”, “Valor Máximo (R$ por quilo)” e “Valor Médio (R$ por quilo)” tendo em vista “Zona” e  “Categoria”.<br>
+<b>E</b> o retorno será 200.<br>
 
 # Itens relativos às ações do usuário
 ### Home
